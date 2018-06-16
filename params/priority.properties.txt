@@ -1,5 +1,0 @@
-Low=Trivial
-Medium=Minor
-High=Major
-Critical=Critical
-Blocker=Blocker

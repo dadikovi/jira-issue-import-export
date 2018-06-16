@@ -1,4 +1,0 @@
-CN_Loxon=trunk
-ALL_LCS 2.3=trunk
-ALL_LCS 2.2=branches/version_2_2_x
-default=trunk
