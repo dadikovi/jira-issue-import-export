@@ -1,0 +1,21 @@
+{
+	"jira_systems": {
+		"internal": {
+			"url_base":"https://jira.loxon.hu/",
+			"username":"",
+			"password":"l",
+			"username_http":"",
+			"password_http":"",
+			"url_postfix_auth":"rest/auth/1/session",
+			"url_postfix_api":"rest/api/latest/"
+		},
+		"external": {
+			"url_base":"https://jira.homecredit.net/jira/",
+			"username": "!cc_lcs_defect",
+			"password":"lcs1234",
+			"url_postfix_auth":"rest/auth/1/session",
+			"url_postfix_api":"rest/api/latest/",
+			"key_list_jql":"key in (LCS-4703)"
+		}
+	}
+}

@@ -1,0 +1,9 @@
+fields.project.key=CHCI
+fields.issuetype.name=Bug
+fields.assignee.name=karacsony.orsolya@loxon.hu
+fields.customfield_11910.name=L3 BC S2
+fields.customfield_11911.name=L3 Dev S2
+fields.customfield_10015.id=10723
+fields.customfield_10114.id=10116
+#fields.status.name=ToDo
+#fields.customfield_11611.value=UAT support - 2.2

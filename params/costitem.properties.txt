@@ -1,0 +1,5 @@
+trunk=14897
+branches/version_2_2_x=14134
+default=14134
+# Only comment: 14897=UAT support-2.3
+# Only comment: 14134=UAT support-2.2

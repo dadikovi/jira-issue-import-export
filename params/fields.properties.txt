@@ -1,0 +1,11 @@
+CONCAT(key,-,fields.summary)=fields.summary
+fields.priority.name=fields.priority.name
+key=fields.customfield_10013
+fields.attachment.content=SPECIAL
+CONCAT(fields.description,JSONDECODE(fields.comment.comments,fields.comment.comments.author.displayName,fields.comment.comments.updated,fields.comment.comments.body))=fields.description
+CONCAT(fields.customfield_10002,fields.customfield_10111,fields.environment)=fields.environment
+fields.fixVersions.name=fields.fixVersions[0].name
+fields.project.key=fields.customfield_10116.value
+#fields.customfield_10050=fields.versions.name TODO lehet fosul fog működni
+#fields.customfield_11611=TODO MAPPING EPIC
+#fields.priority.name=fields.duedate MAPPING TODO!
