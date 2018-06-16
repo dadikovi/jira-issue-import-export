@@ -1,7 +1,7 @@
 {
 	"jira_systems": {
 		"internal": {
-			"url_base":"https://jira.loxon.hu/",
+			"url_base":"",
 			"username":"",
 			"password":"l",
 			"username_http":"",
@@ -10,12 +10,12 @@
 			"url_postfix_api":"rest/api/latest/"
 		},
 		"external": {
-			"url_base":"https://jira.homecredit.net/jira/",
-			"username": "!cc_lcs_defect",
-			"password":"lcs1234",
+			"url_base":"",
+			"username": "",
+			"password":"",
 			"url_postfix_auth":"rest/auth/1/session",
 			"url_postfix_api":"rest/api/latest/",
-			"key_list_jql":"key in (LCS-4703)"
+			"key_list_jql":""
 		}
 	}
 }

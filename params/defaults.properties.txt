@@ -1,6 +1,6 @@
 fields.project.key=CHCI
 fields.issuetype.name=Bug
-fields.assignee.name=karacsony.orsolya@loxon.hu
+fields.assignee.name=
 fields.customfield_11910.name=L3 BC S2
 fields.customfield_11911.name=L3 Dev S2
 fields.customfield_10015.id=10723
