@@ -1,0 +1,2 @@
+class FlowValidationException(Exception):
+    pass

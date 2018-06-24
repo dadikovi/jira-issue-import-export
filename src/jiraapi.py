@@ -6,9 +6,11 @@ requests.packages.urllib3.disable_warnings(InsecureRequestWarning)
 from json.decoder import JSONDecodeError
 
 class JiraAPI:
+    @staticmethod
     def get_json_header():
         return {'Content-Type':'application/json'}
 
+    @staticmethod
     def create_session(system):
         sess_id = JiraAPI.create_session_id(system)
         session = requests.Session()
@@ -18,8 +20,10 @@ class JiraAPI:
         session.headers.update(JiraAPI.get_json_header())
         return session
 
+    @staticmethod
     def create_session_id(system):
         try:
+            print(JiraAPI.create_session_id_url(system))
             response = requests.post(
                 JiraAPI.create_session_id_url(system),
                 auth = JiraAPI.create_session_id_auth(system),
@@ -37,17 +41,20 @@ class JiraAPI:
         except TimeoutError:
             print("ERROR! Connection to " + JiraAPI.create_session_id_url(system) + " could not be established!")
 
+    @staticmethod
     def create_session_id_data(system):
         data = dict()
         data["username"] = system.get_config('username')
         data["password"] = system.get_config('password')
         return json.dumps(data)
 
+    @staticmethod
     def create_session_id_url(system):
         url = system.get_config('url_base')
         url = url + system.get_config('url_postfix_auth')
         return url
 
+    @staticmethod
     def create_session_id_auth(system):
         if system.get_config('username_http'):
             return (
@@ -57,6 +64,7 @@ class JiraAPI:
         else:
             return None
 
+    @staticmethod
     def get_api(url, system):
         try:
             full_url = JiraAPI.create_full_url(url, system)
@@ -71,6 +79,7 @@ class JiraAPI:
             print(str(resp.text))
             return ""
 
+    @staticmethod
     def put_api(url, system, data):
         try:
             full_url = JiraAPI.create_full_url(url, system)
@@ -86,6 +95,7 @@ class JiraAPI:
             print(str(data))
             return ""
 
+    @staticmethod
     def post_api(url, system, data):
         try:
             full_url = JiraAPI.create_full_url(url, system)
@@ -100,15 +110,20 @@ class JiraAPI:
             print(str(resp.text))
             print(str(data))
             return ""
+
+    @staticmethod
     def download(full_url, system):
         resp = system.session().get(full_url)
         return resp.content
+
+    @staticmethod
     def upload(system, url, files):
         full_url = JiraAPI.create_full_url(url, system)
         header = {'content-type': None, 'X-Atlassian-Token':'nocheck'}
         print("INFO - Upload " + full_url)
         system.session().post(full_url, headers=header, files=files)
 
+    @staticmethod
     def create_full_url(url, system):
         full_url = system.get_config('url_base')
         full_url = full_url + system.get_config('url_postfix_api')
